@@ -35,6 +35,6 @@ public void setColumn(int column) {
 public String toString() {
 	return row + " , " + column;
 	
-	}
+ }
 
 }
