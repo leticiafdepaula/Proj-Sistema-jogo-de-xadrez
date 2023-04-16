@@ -1,5 +1,8 @@
 package Boardgame;
 
+import Chess.pieces.King;
+import Chess.pieces.Rook;
+
 public class Board {
 
 	private int rows;
@@ -36,4 +39,13 @@ public Piece piece(int row, int column) {
 	return pieces [position.getRow()][position.getColumn()];
 		
 	}
+
+public void placePiece(King king, Position position) {
+}
+
+public void placePiece(Rook rook, Position position) {
+	// TODO Auto-generated method stub
+	
+}
+
 }
