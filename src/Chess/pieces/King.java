@@ -10,24 +10,26 @@ public class King {
 
 		public king(Board board, Color color) {
 			super(board, color);
-			
-		}
-	
+
 		}
 
+		@Override
+		public boolean[][] possibleMoves() {
+			boolean[][] mat = new boolean[getBoard().getRows()][getBoard().getColumns()];
+			return mat;
 
-public King(Board board, Color black) {
+		}
 
 	}
 
+	public King(Board board, Color black) {
 
-@Override
-public String toString( ) {
-	return "K";
-	
+	}
+
+	@Override
+	public String toString() {
+		return "K";
+
+	}
+
 }
-
-
-
-}
-

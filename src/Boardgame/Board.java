@@ -88,9 +88,6 @@ public class Board {
 
 	}
 
-	public void placePiece(King king, Position position2) {
-		// TODO Auto-generated method stub
 
 	}
 
-}
