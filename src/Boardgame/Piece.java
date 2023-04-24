@@ -35,5 +35,7 @@ public boolean isThereAnyPossibleMove() {
    return false;
 }
 
+public abstract void add(Piece capturedPiece);
+
 
 }
