@@ -162,7 +162,7 @@ public class ChessMath {
 		List<Piece> List = piecesOnTheBoard.stream().filter(x -> ((ChessPiece) x).getColor() == color)
 				.collect(Collectors.toList());
 		for (Piece p : List) {
-			if (p instanceof King) {
+			if (p instanceof) {
 				return (ChessPiece) p;
 			}
 		}
