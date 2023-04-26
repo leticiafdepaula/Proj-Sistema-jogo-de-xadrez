@@ -3,6 +3,7 @@ package Application;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import Boardgame.Piece;
 import Chess.ChessMath;
 import Chess.ChessPiece;
 import Chess.ChessPosition;
@@ -41,15 +42,37 @@ public class UI {
 		throw new InputMismatchException("Erro reading ChessPosition. valid values are from a1 to h8.");
 
 	}
+
+	public static void printMatch(ChessMath chessMatch, Piece captured) {
+		printBoard(chessMatch.getPieces());
+		System.out.println();
+		printCapturedPieces(captured);
+		System.out.println();
+		System.out.println("Turn :  " + chessMatch.getTurn());
+		if (!chessMatch.getCheckmate()) {
+			System.out.println("Waiting player:  " + chessMatch.getCurrentPlayer());
+			if (chessMatch.getCheck()) {
+				System.out.println("CHECK");
+			}
+		}
+		
+		else {
+			System.out.println("CHECKMATE!");
+			System.out.println("Winner: " + chessMatch.getCurrentPlayer());
+		
+		
+		
+		
+		}
 	
-	public static void printMatch(ChessMath chessMatch) {
-	printBoard(chessMatch.getPieces());
-	System.out.println();
-	System.out.println("Turn :  " + chessMatch.getTurn());
-	System.out.println("Waiting player:  " + chessMatch.getCurrentPlayer());
+	
 	
 	}
-	
+
+	private static void printCapturedPieces(Piece captured) {
+		// TODO Auto-generated method stub
+
+	}
 
 	public static void printBoard(ChessPiece[][] pieces, boolean[][] possibleMoves) {
 		for (int i = 0; i < pieces.length; i++) {
@@ -86,8 +109,7 @@ public class UI {
 		}
 		if (piece == null) {
 			System.out.print("-" + ANSI_RESET);
-		} 
-		else {
+		} else {
 			if (piece.getColor() == Color.WHITE) {
 				System.out.print(ANSI_WHITE + piece + ANSI_RESET);
 			} else {
@@ -104,10 +126,7 @@ public class UI {
 
 	public static void printBoard(ChessPiece[][] pieces) {
 		// TODO Auto-generated method stub
-		
-	}
-
 
 	}
 
-
+}
