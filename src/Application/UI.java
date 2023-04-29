@@ -1,10 +1,11 @@
 package Application;
 
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 import Boardgame.Piece;
-import Chess.ChessMath;
+import Chess.ChessMatch;
 import Chess.ChessPiece;
 import Chess.ChessPosition;
 import Chess.Color;
@@ -43,13 +44,13 @@ public class UI {
 
 	}
 
-	public static void printMatch(ChessMath chessMatch, Piece captured) {
+	public static void printMatch(ChessMatch chessMatch, List<ChessPiece> captured) {
 		printBoard(chessMatch.getPieces());
 		System.out.println();
 		printCapturedPieces(captured);
 		System.out.println();
 		System.out.println("Turn :  " + chessMatch.getTurn());
-		if (!chessMatch.getCheckmate()) {
+		if (!chessMatch.getCheckMate()) {
 			System.out.println("Waiting player:  " + chessMatch.getCurrentPlayer());
 			if (chessMatch.getCheck()) {
 				System.out.println("CHECK");
@@ -69,7 +70,7 @@ public class UI {
 	
 	}
 
-	private static void printCapturedPieces(Piece captured) {
+	private static void printCapturedPieces(List<ChessPiece> captured) {
 		// TODO Auto-generated method stub
 
 	}
