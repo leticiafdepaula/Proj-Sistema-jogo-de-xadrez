@@ -9,7 +9,9 @@ import Boardgame.Piece;
 import Boardgame.Position;
 import Chess.pieces.Bishop;
 import Chess.pieces.King;
+import Chess.pieces.Knight;
 import Chess.pieces.Pawn;
+import Chess.pieces.Queen;
 import Chess.pieces.Rook;
 
 public class ChessMath {
@@ -166,9 +168,10 @@ public class ChessMath {
 			if (p instanceof King)
 				return (ChessPiece)p;
 			}
-		}throw new IllegalStateException("There is no "+color+" king on the board");
+		}
+	throw new IllegalStateException("There is no "+color+" king on the board");
 
-	}
+	
 
 	private boolean testCheck(Color color) {
 		Position KingPosition = king(color).getChessPosition().toPosition();
@@ -228,7 +231,7 @@ public class ChessMath {
         placeNewPiece('f', 1, new Bishop(board, Color.WHITE));
         placeNewPiece('g', 1, new Knight(board, Color.WHITE));
         placeNewPiece('h', 1, new Rook(board, Color.WHITE));
-        placeNewPiece('a', 2, new Pawn(board, Color.WHITE, this));
+        placeNewPiece('a', 2, new Pawn(board, Color.WHITE));
         placeNewPiece('b', 2, new Pawn(board, Color.WHITE, this));
         placeNewPiece('c', 2, new Pawn(board, Color.WHITE, this));
         placeNewPiece('d', 2, new Pawn(board, Color.WHITE, this));
@@ -254,14 +257,13 @@ public class ChessMath {
         placeNewPiece('g', 7, new Pawn(board, Color.BLACK, this));
         placeNewPiece('h', 7, new Pawn(board, Color.BLACK, this));
 
-	private void placeNewPiece(char c, int i, Rook rook) {
-		// TODO Auto-generated method stub
 
 	}
-
-	private void placeNewPiece(char c, int i, King king) {
-		// TODO Auto-generated method stub
-
-	}
+	
+}
 
 }
+
+
+
+
