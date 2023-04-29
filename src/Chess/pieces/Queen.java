@@ -103,6 +103,12 @@ public class Queen extends ChessPiece {
 
 	}
 
+	@Override
+	public void add(Piece capturedPiece) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 
 	}
